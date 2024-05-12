@@ -1,4 +1,5 @@
 import userDate from '../fixtures/userDate.json'
+
 describe('Orange HRM Tests', () => {
 
   const selectorslist = {
@@ -10,7 +11,7 @@ describe('Orange HRM Tests', () => {
   }
 
   it('Login-Success', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorslist.usernameField).type(userDate.userSuccess.username)
     cy.get(selectorslist.passwordField).type(userDate.userSuccess.password)
     cy.get(selectorslist.loginButton).click()
@@ -18,7 +19,7 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorslist.dashboardGrid)
   })
   it('Login-Fail', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorslist.usernameField).type(userDate.userFail.username)
     cy.get(selectorslist.passwordField).type(userDate.userFail.password)
     cy.get(selectorslist.loginButton).click()
