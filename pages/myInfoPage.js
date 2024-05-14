@@ -44,7 +44,7 @@ class MyInfoPage {
     FillStatusDetails(Data2) {
       cy.get(this.selectorsList().genericSelectButton).eq(0).click({force: true})
           cy.get(this.selectorsList().firstSelectableOption).click()
-      cy.get(this.selectorsList().genericSelectButton).eq(1).click()
+      cy.get(this.selectorsList().genericSelectButton).eq(1).click({force :true})
           cy.get(this.selectorsList().secondSelectableOption).click()
       cy.get(this.selectorsList().genericDateField).eq(1).clear().type(Data2)
       cy.get(this.selectorsList().dateCloseButton).click({force: true})

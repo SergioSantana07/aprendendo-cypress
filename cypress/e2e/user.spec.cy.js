@@ -22,8 +22,8 @@ describe('Orange HRM Tests', () => {
     menuPage.acessMyInfo()
     myInfoPage.ConferenceMyInfo()
     myInfoPage.FillPersonalDetails(chance.first(),chance.last(),chance.last())
-    myInfoPage.FillEmployeeDetails(chance.prime({min: 100, max: 2000}),chance.prime({min: 100, max: 2000}),chance.ssn(),"2034-10-20")
-    myInfoPage.FillStatusDetails("2000-10-20")
+    myInfoPage.FillEmployeeDetails(chance.prime({min: 100, max: 2000}),chance.prime({min: 100, max: 2000}),chance.ssn(),'2034-05-10')
+    myInfoPage.FillStatusDetails('2000-05-10')
     myInfoPage.SaveForm()
  
   })
